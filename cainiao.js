@@ -14,13 +14,13 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
     nextMission.click();
     log("点击去完成");
     //等待加载完成任务页面，可能要调整
-    sleep(2000);
+    sleep(3000);
     if (text("滑动开始计时").exists()) {
         log("滑动开始计时");
         swipe(35 + random(10, 20), 1828 + random(10, 20), 35 + random(10, 20), 978 + random(10, 20), 1000 + random(100, 200));
         swipe(35 + random(10, 20), 1828 + random(10, 20), 35 + random(10, 20), 978 + random(10, 20), 1000 + random(100, 200));
         swipe(35 + random(10, 20), 1828 + random(10, 20), 35 + random(10, 20), 978 + random(10, 20), 1000 + random(100, 200));
-        sleep(2100);
+        sleep(21000);
 
         back();
         text("包裹梦工厂").waitFor();
@@ -54,7 +54,8 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
 
     if (text("天天领红包").exists()) {
         log("天天领红包");
-        if (text("浏览本页面，红包可翻倍").exists()) {
+        sleep(500);
+        if (text("x").exists()) {
             text("x").click();
             sleep(500);
         }
@@ -92,6 +93,8 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
     }
 
     log("不认识的任务");
+    back();
+    text("做任务得包裹").waitFor();
     click("做任务得包裹");
     text("任务数量").waitFor();
 }
