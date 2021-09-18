@@ -13,7 +13,7 @@
 
 ## 如何使用
 
-1. 下载js脚本并给Auto.js/Auto.js Pro**无障碍访问**权限 或 下载release中的打包apk安装并赋予**无障碍访问**权限（待发布）
+1. 下载js脚本并给Auto.js/Auto.js Pro**无障碍访问**权限 或 下载[release](https://github.com/syhien/CaiNiao-Auto.js/releases/latest)中的打包apk安装并赋予**无障碍访问**权限
 2. 保证“包裹梦工厂”添加到了菜鸟首页
 3. 运行
 
