@@ -42,7 +42,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
             sleep(500);
         }
 
-        sleep(1000);
+        sleep(2000);
         back();
         text("包裹梦工厂").waitFor();
         click("包裹梦工厂");
@@ -93,6 +93,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
     }
 
     log("不认识的任务");
+    toast("不认识的任务");
     back();
     text("做任务得包裹").waitFor();
     click("做任务得包裹");
