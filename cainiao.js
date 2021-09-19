@@ -14,7 +14,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
     nextMission.click();
     log("点击去完成");
     //等待加载完成任务页面，可能要调整
-    sleep(3000);
+    sleep(4000);
     if (text("滑动开始计时").exists()) {
         log("滑动开始计时");
         swipe(35 + random(10, 20), 1828 + random(10, 20), 35 + random(10, 20), 978 + random(10, 20), 1000 + random(100, 200));
