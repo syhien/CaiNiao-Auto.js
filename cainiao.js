@@ -121,9 +121,8 @@ while (1) {
     log("不认识的任务");
     toast("不认识的任务");
     back();
-    text("做任务得包裹").waitFor();
-    click("做任务得包裹");
-    text("换一换").waitFor();
+    click("换一换");
+    sleep(2000);
 }
 
 toast("完成20个任务");
