@@ -6,10 +6,11 @@ click("包裹梦工厂");
 
 text("做任务得包裹").waitFor();
 click("做任务得包裹");
-text("任务数量").waitFor();
+text("换一换").waitFor();
 sleep(1000);
 
-while (className("android.view.View").textStartsWith("已完成").findOnce().text() != "已完成16/16") {
+while (1) {
+    log("准备做任务");
     nextMission = text("去完成").findOne();
     nextMission.click();
     log("点击去完成");
@@ -27,7 +28,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
         click("包裹梦工厂");
         text("做任务得包裹").waitFor();
         click("做任务得包裹");
-        text("任务数量").waitFor();
+        text("换一换").waitFor();
         continue;
     }
 
@@ -48,7 +49,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
         click("包裹梦工厂");
         text("做任务得包裹").waitFor();
         click("做任务得包裹");
-        text("任务数量").waitFor();
+        text("换一换").waitFor();
         continue;
     }
 
@@ -73,7 +74,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
         click("包裹梦工厂");
         text("做任务得包裹").waitFor();
         click("做任务得包裹");
-        text("任务数量").waitFor();
+        text("换一换").waitFor();
         continue;
     }
 
@@ -88,8 +89,33 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
         click("包裹梦工厂");
         text("做任务得包裹").waitFor();
         click("做任务得包裹");
-        text("任务数量").waitFor();
+        text("换一换").waitFor();
         continue;
+    }
+
+    if (text("添加包裹").exists()) {
+        log("添加包裹");
+        sleep(1000);
+        var numberInput = "1";
+        id("package_import_edit_text").findOne().setText(numberInput);
+        log(id("package_import_edit_text").findOne().text());
+        
+        while (!id("package_query_import_card_btn_layout").findOnce() || !id("package_query_import_card_btn_layout").findOnce().clickable()) {
+            sleep(100);
+            numberInput += random(0,9).toString();
+            id("package_import_edit_text").findOne().setText(numberInput);
+            log(id("package_import_edit_text").findOne().text());
+            sleep(1000);
+        }
+        id("package_query_import_card_btn_layout").click();
+        log("尝试添加包裹");
+        sleep(5000);
+        back();
+        text("包裹梦工厂").waitFor();
+        click("包裹梦工厂");
+        text("做任务得包裹").waitFor();
+        click("做任务得包裹");
+        text("换一换").waitFor();
     }
 
     log("不认识的任务");
@@ -97,7 +123,7 @@ while (className("android.view.View").textStartsWith("已完成").findOnce().tex
     back();
     text("做任务得包裹").waitFor();
     click("做任务得包裹");
-    text("任务数量").waitFor();
+    text("换一换").waitFor();
 }
 
-toast("完成16个任务");
+toast("完成20个任务");
