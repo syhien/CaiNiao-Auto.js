@@ -1,4 +1,4 @@
-**因为包裹梦工厂没什么活动了，这个脚本也懒得维护了，转战[喜气红包](https://github.com/syhien/XiQi-Auto.js)**
+**重启项目**
 
 # CaiNiao-Auto.js
 菜鸟裹裹 包裹梦工厂 Auto.js Pro 自动化脚本
